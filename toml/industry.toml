@@ -1,0 +1,40 @@
+Uri = "http://data.stats.gov.cn/easyquery.htm"
+Jsonpath = "$.returndata.wdnodes[0].nodes"
+
+[Query]
+  [Query.colcode]
+    Values = ["sj"]
+    Type = 0
+  [Query.dbcode]
+    Values = ["fsnd"]
+    Type = 0
+  [Query.dfwds]
+    Values = ["[{\"wdcode\":\"zb\",\"valuecode\":\"A0401\"}]"]
+    Type = 2
+  [Query.k1]
+    Values = ["1501221301303"]
+    Type = 0
+  [Query.m]
+    Values = ["QueryData"]
+    Type = 0
+  [Query.rowcode]
+    Values = ["zb"]
+    Type = 0
+  [Query.wds]
+    Values = ["[{\"wdcode\":\"reg\",\"valuecode\":\"110000\"}]"]
+    Type = 2
+
+[[Structs]]
+Name = "Code"
+Type = "string"
+Tag = "json:\"code\""
+
+[[Structs]]
+Name = "Name"
+Type = "string"
+Tag = "json:\"name\""
+
+[[Structs]]
+Name = "Memo"
+Type = "string"
+Tag = "json:\"memo\""
